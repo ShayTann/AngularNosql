@@ -1,0 +1,44 @@
+<!-- Search form -->
+<form (ngSubmit)="fetchWord()">
+<input class="form-control stay" type="text" placeholder="Search for a word"[(ngModel)]="tmpname" name="word" aria-label="Search">
+
+<button type="button" class="btn btn-indigo same" (click)="fetchWord()">Find !</button>
+<button type="button" class="btn btn-danger same" (click)="reset()">Cancel</button>
+</form>
+
+
+<div *ngIf="show " id="fillMe">
+    <header class="section-header">
+        <h3 class="section-title">Your word appears in {{count}} topics today .</h3></header>
+    
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Score</th>
+                <th scope="col">Subreddit</th>
+                <th scope="col">Topic</th>
+                <th scope="col">Author</th>
+                <th scope="col">Positivity</th>
+                <th scope="col">Negativity</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let topic of fetchedTopics ;">
+              <tr>
+                <th scope="row">{{topic.score}}</th>
+                <td>{{topic.subreddit}}</td>
+                <td>{{topic.body}}</td>
+                <td>{{topic.author}}</td>
+                <td>{{topic.positivity}}</td>
+                <td>{{topic.negativity}}</td>
+              </tr>
+            
+            </tbody>
+          </table>
+
+</div>
+
+<div *ngIf="empty" >
+
+  This word does not appears in today's topics we are sorry maybe come back later
+
+</div>

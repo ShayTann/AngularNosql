@@ -1,0 +1,91 @@
+ <section id="call-to-action" class="wow fadeInUp" > <!-- Clustering -->
+      <div class="container" >
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Cluster Comments for each topic </h3>
+            <p class="cta-text"> Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group are more similar to each other than to those in other groups. </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="" (click)="toggle()">Cluster for me !</a>     
+          </div>
+
+        </div>
+
+      </div>
+      <!-- why clustering -->
+    </section>
+        <br>
+      <section id="why_clustering"  [@rollIn]="stateName">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img">
+              <img src="assets/images/why_clustering.png" alt="" class="clustering_img">
+             
+            </div>
+            <div>
+             <img src="assets/images/why_clustering2.png" alt="" class="clustering_img">
+             </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content" >
+              <h2 id="aboutslide">Why Clustering?</h2>
+              <h3>Clustering is important in Data Mining.</h3>
+              <p>• Organizing data into clusters shows internal structure of the data </p>
+              <p>– Ex. Clusty and clustering genes above  </p>
+              <p> • Sometimes the partitioning is the goal </p>
+              <p>– Ex. Market segmentation </p>
+              <p>• Prepare for other AI techniques </p>
+              <p>– Ex. Summarize news (cluster and then find centroid) </p>
+              <p>• Techniques for clustering is useful in knowledge discovery in data </p>
+              <p>– Ex. Underlying rules, reoccurring patterns, topics, etc. </p>
+            
+             <a href="#cluster"><button type="button" class="btn btn-primary btn-sm" (click)="toggle()">Ok ! cluster for me</button></a>
+             <br><br> <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- #Clustering -->
+      <section   class="section-bg" >
+      
+      <div class="container">
+
+        <header class="section-header">
+        <br><br><br>
+          <h3 class="section-title" id="RedditAnalysis">Clustering Comments for every topic</h3>
+        </header>
+           <div class="row feature-item mt-5 pt-5">
+          <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            <img src="assets/images/clustering.png" class="img-fluid" alt="" id ="clustering-img">
+          </div>
+
+          <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0" style="width:100%" id="clustering-txt">
+         Here you can choose any topic and we'll apply KMeans Clustering algortihm for the comments , we'll separate words using in comments into two groups each element of a single group is sharing some characteristics with others words in the same groupe .
+           
+          </div>
+          
+        </div>
+    
+      <br><br>
+      <div style="text-align:center;" id="topics-choose">
+        First of all choose you're topic !
+        <hr>
+          </div>
+          <select class="form-control form-control-sm"  (change)="onChange($event.target.value)">
+          <option> Select your topic </option>
+          
+          <option *ngFor="let topic of Topics | slice:0:10" value={{topic}} >{{topic}}</option>
+          </select>
+           <br><br><br>
+           <div id="clusted1"> </div>
+           <div id="clusted2">  </div>
+            </div>
+             <br><br> 
+    </section>
+    <br><br>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SpyForMe</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="assets/images/favicon.png" rel="icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+          <h1 class="text-light"><a href="#intro" class="scrollto"><span>SpyForMe</span></a></h1>
+        
+        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+      </div>
+        
+        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block ">
+    
+        <ul>
+          <li class="active"><a href="#intro" (click)="toggle()" >Home</a></li>
+          <li><a href="#aboutslide" (click)="toggle()">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix" [@rollIn]="stateName" >
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+          <h2>Analyse<br>Adapt <span>Improve!</span></h2>
+          <div>
+
+            <a href="#aboutslide" class="btn-get-started scrollto" (click)="toggle()">Get Started</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 intro-img order-md-last order-first">
+          <img src="assets/images/intro-img.svg" alt="" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <main id="main">
+<!-- #about us -->
+    <section id="about" [@rollIn]="stateName">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img">
+              <img src="assets/images/about-img.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content">
+              <h2 id="aboutslide">About Us</h2>
+              <h3>We are Data Science students.</h3>
+              <p>Data science provides meaningful information based on large amounts of complex data or big data. Data science, or data-driven science, combines different fields of work in statistics and computation to interpret data for decision-making purposes.</p>
+              <p>Data is drawn from different sectors, channels, and platforms including cell phones, social media, e-commerce sites, healthcare surveys, and Internet searches. The increase in the amount of data available opened the door to a new field of study based on big data—the massive data sets that contribute to the creation of better operational tools in all sectors. </p>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> <a href="#servicesslide"><button type="button" class="btn btn-primary btn-sm" (click)="toggle()">What services we provide?</button></a></li>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- #services -->
+    <section id="services" class="section-bg" [@rollIn]="stateName">
+      <div class="container" >
+
+        <header class="section-header"  id ="servicesslide">
+          <h3 >Services</h3>
+          <p>Analysing real-Time data about trending topics on <a href="https://www.reddit.com/"  target="_blank">Reddit</a> and comments</p>
+        </header>
+
+        <div class="row" >
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s" >
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="#topics" (click)="toggle()">Trending Reddits </a></h4>
+              <p class="description">Providing the subjects of the most trending Reddits </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="" (click)="toggle()">Analysing Topics</a></h4>
+              <p class="description">Statistiques , classification ect..</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="" (click)="toggle()">Graphics visualization </a></h4>
+              <p class="description">You can visualise the most trending topics and reddits on graphs  </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="" (click)="toggle()">Sentiment Analysis</a></h4>
+              <p class="description">We provide sentiment analysis for topics </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
+              <h4 class="title"><a href="#why_clustering" (click)="toggle2()">Clustering</a></h4>
+              <p class="description">K-means Algorithm can be really usefull for text clustering</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
+              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Why Us Section
+    ============================-->
+    <section  class="wow fadeIn" [@rollIn]="stateName">
+      <div class="container-fluid">
+       
+        <header class="section-header" style="text-align: center;">
+        <br><br><br> 
+        
+          <h3 >Trending Reddits</h3>
+          <p>Here you can vizualise real-time trending topics on reddit</p>
+         
+        </header>
+
+        <div class="row">
+
+         
+
+          <div class="col-lg-6">
+            <div class="why-us-content" >
+             
+               <table id="tablePreview"  class="table" id="topics" >
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">SubReddit </th>
+      <th scope="col">Author</th>
+      <th scope="col">Content</th>
+      <th scope="col">Score</th>
+    </tr>
+    </thead>
+   
+    <tbody *ngFor="let topic of topics | slice:0:5;">
+    
+    <tr scope="row"> 
+    <td> {{topic.subreddit}} </td>
+    <td> {{topic.author}} </td>
+    <td> {{topic.body}} </td>
+    <td> {{topic.score}} </td>
+    </tr>
+    </tbody>
+    
+    </table>
+
+             
+              
+            </div>
+
+          </div>
+
+        </div>
+
+      
+
+     
+
+      </div> 
+    </section>
+   
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Trending Subreddit Analyse</h3>
+            <p class="cta-text"> Let us analyse for you these trending subreddits to get informations that gonna help you taking decisions </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#RedditAnalysis" (click)="toggle()">Analyse for me !</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+
+    <!--==========================
+      Features Section
+    ============================-->
+    <section id="features"  [@rollIn]="stateName">
+      <div class="container">
+
+        <div class="row feature-item">
+          <div class="col-lg-6 wow fadeInUp">
+            <img src="assets/images/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+            <h4>Importance of social media</h4>
+            <p>
+              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+            </p>
+            <p>
+              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
+            </p>
+          </div>
+        </div>
+
+        <div class="row feature-item mt-5 pt-5">
+          <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            <img src="assets/images/features-2.svg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+            <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
+            <p>
+             Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
+            </p>
+            <p>
+              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
+            </p>
+            <p>
+              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
+            </p>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+
+    <!--==========================
+      Reddit analyser
+    ============================-->
+    <section   class="section-bg"  [@rollIn]="stateName">
+      <div class="container">
+
+        <header class="section-header">
+        <br><br><br>
+          <h3 class="section-title" id="RedditAnalysis">Reddits Analyser</h3>
+        </header>
+           <div class="row feature-item mt-5 pt-5">
+          <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            <img src="assets/images/reddit_analyser.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1" style="width:100%">
+            <!-- HighCharts -->
+            <div id="barChart" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+          </div>
+          
+        </div>
+     
+        
+
+      </div>
+      <div style="text-align:center;">
+        <a href="#canvas2">  <button type="button" class="btn btn-outline-info"  (click)="toggle()">Let's me see what's topics are trending</button> </a>
+        <hr>
+          </div>
+    </section>
+
+
+    <!--==========================
+      Trending topics
+    ============================-->
+    <section  >
+          <div class="container" style="width:65%">
+          
+         <header class="section-header">
+        <br><br><br>
+          <h3 class="section-title">Top 10 trending topics on reddit right now</h3>
+        </header>
+        <div class="row feature-item mt-5 pt-5">
+
+          <!-- Chart -->
+         <canvas id="canvas2"  [@rollIn]="stateName"> </canvas>
+
+          </div>
+            <br><br><br>
+
+            <app-search>  </app-search>
+
+            <br><br><br>
+
+            <header class="section-header">
+            <h3 class="section-title">Sentiment Analysis:</h3></header>
+            <h2 id="aboutslide">What is sentiment analysis and why?</h2>
+            Sentiment analysis is the interpretation and classification of emotions (positive, negative and neutral) within text data using text analysis techniques. Sentiment analysis allows businesses to identify customer sentiment toward products, brands or services in online conversations and feedback.
+            <br><br>
+            <h2 id="aboutslide">Exemple :</h2>
+    
+            <img src="assets/images/positive.jpg" class="img-fluid moveme" alt="">
+            <img src="assets/images/neutral.jpg" class="img-fluid moveme" alt="">
+            <img src="assets/images/negative.jpg" class="img-fluid moveme" alt="">
+
+            <br><br>
+            <h2 id="aboutslide">Positivity and negativity on Reddit the last 24hours :</h2>
+            
+            <br><br>
+
+            <h2 id="aboutslide">Now it's your turn !</h2>
+            Select the topic and let us do the job for you .
+            <br><br>
+          <select class="form-control form-control-sm"  (change)="onChange($event.target.value)">
+          <option> Select your topic </option>
+          <option   *ngFor="let topic of Topics_array | slice:0:10;let index=index" value={{topic}} >{{topic}}</option>
+          </select>
+                 <br><br><br>
+           <div id="sentimentAnalysis"> </div>
+           <div id="resultSentiment">  </div>
+             <br> <br>
+
+            <div id="Todayresult"> </div>
+            <br><br>
+         
+           <!-- <canvas id="canvas3"  [@rollIn]="stateName"> </canvas> -->
+           <div id="lineChart" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+          <br> <br>
+          
+        </div> 
+      
+    </section>
+
+    <app-clustering > </app-clustering>
+   
+    <section id="footer" class="clearfix" > Contact us here </section>
+  </main>
+
+ <footer>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; FSTT <strong>SPY FOR ME </strong>. MASTER MBD
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+        -->
+        Mallouk Mohamed , Zakaria Chamlali <a href="">NO SQL</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+</body>
+</html>
